@@ -2,18 +2,9 @@ package main
 
 import (
 	"strconv"
-	"strings"
 )
 
+// strconv.Atoi는 앞자리가 +든 -든 숫자면 숫자로 변환해준다..... (수정))
 func main(s string) int {
-	str := s[0:len(s)]
-	number, err := strconv.Atoi(str)
-	if err != nil {
-		return 0
-	}
-	return number
-	if strings.HasPrefix(s, "+") {
-		return number
-	}
-	return -number
+	number, _ := strconv.Atoi(s)
 }
